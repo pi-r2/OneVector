@@ -1,6 +1,6 @@
 This repository contains the code implementing the attacks against UOV described in the paper {link}.
 
-To run the test, execute the following code on a machine with sagemath 9.2 avalaible:
+To run the test, execute the following code on a machine with sagemath 9.5 avalaible:
 
 ```
 $ sage Attack.sage
