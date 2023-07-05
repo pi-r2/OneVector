@@ -23,34 +23,6 @@ def complete_basis(B, E) :
             res.append(b)
     return res
 
-    
-def system_to_matrix(S):   
-    """
-    This function takes as input a linear system in k variables and k equations in a polynomial ring 
-    and returns the matrix A that describes this linear system, and the constant terms as the target vector B.
-    """
-
-    FF = S.base_ring()
-    k = len(S.rows()) #S is a k*k system. 
-    mat = []
-    B = [0 for _ in range(k)]
-    
-    
-    
-    for e in range(k):
-        Se = S[e]
-        eq= Se[0]
-        line = [0 for _ in range(k)]
-        for i in range(len(eq.monomials())):
-            if str(eq.monomials()[i])[0] == 'x': #If it is not the case, the monomial is a constant.
-                coef = int(str(eq.monomials()[i])[1:])
-                line[coef]=eq.coefficients()[i]
-            else: 
-                B[e] = -eq.coefficients()[i] #We directly add the constant to the target vector B.
-        mat.append(line)
-    mat = matrix(FF,k,k,mat)
-    B = vector(FF,k,B)
-    return mat, B
 
 def ROMKeyGen(q,k,v) :
     """
