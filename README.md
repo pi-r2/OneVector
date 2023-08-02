@@ -1,4 +1,4 @@
-This repository contains the code implementing the attacks against UOV described in the paper {link}.
+This repository contains the code implementing the attacks against UOV described in the paper https://eprint.iacr.org/2023/1131.
 
 To run the test, execute the following code on a machine with sagemath 9.5 avalaible:
 
