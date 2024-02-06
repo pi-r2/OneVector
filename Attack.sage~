@@ -20,6 +20,7 @@ def attack(G,v) :
     for g in G :
         ghat = B*g*B.transpose()  #restriction of G to the kernel of J
        	if charac == 2 :
+       	    print('ping')
             ghat = ghat + ghat.transpose()
         for b in ghat.kernel().basis() :
             if len(B2) == 0 or b not in span(B2) :
